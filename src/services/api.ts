@@ -181,6 +181,7 @@ export interface AwsPublishResponse {
 }
 
 export const AWS_API_GATEWAY_ENDPOINT =
+  (import.meta.env.VITE_AWS_API_GATEWAY_ENDPOINT as string) ||
   'https://dwd9l98512.execute-api.ap-south-1.amazonaws.com/dev1/publish';
 
 export async function publishToAwsApiGateway(
